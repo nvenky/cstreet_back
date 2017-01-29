@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  care_for: MyString
+  first_name: MyString
+  last_name: MyString
+  elder_first_name: MyString
+  elder_last_name: MyString
+  mobile: MyString
