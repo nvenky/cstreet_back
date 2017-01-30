@@ -13,18 +13,19 @@
 ActiveRecord::Schema.define(version: 20170128010224) do
 
   create_table "users", force: :cascade do |t|
-    t.string   "auth_id"
+    t.string   "auth_id",                               null: false
     t.string   "auth_name"
-    t.string   "email"
-    t.boolean  "email_verified"
+    t.string   "email",                                 null: false
+    t.boolean  "email_verified",                        null: false
+    t.boolean  "registration_complete", default: false, null: false
     t.string   "care_for"
     t.string   "first_name"
     t.string   "last_name"
     t.string   "elder_first_name"
     t.string   "elder_last_name"
     t.string   "mobile"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index [nil], name: "index_users_on_auth0_id_string", unique: true
   end

@@ -1,10 +1,11 @@
 class CreateUsers < ActiveRecord::Migration[5.0]
   def change
     create_table :users do |t|
-      t.string :auth_id
+      t.string :auth_id, null: false
       t.string :auth_name
-      t.string :email
-      t.boolean :email_verified
+      t.string :email, null: false
+      t.boolean :email_verified, null: false
+      t.boolean :registration_complete, default: false, null: false
       t.string :care_for
       t.string :first_name
       t.string :last_name
