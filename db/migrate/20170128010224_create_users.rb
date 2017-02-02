@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.string :auth_name
       t.string :email, null: false
       t.boolean :email_verified, null: false
-      t.boolean :registration_complete, default: false, null: false
+      t.boolean :registration_complete
       t.string :care_for
       t.string :first_name
       t.string :last_name
